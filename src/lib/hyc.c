@@ -8,7 +8,7 @@
 #include "bytecode.h"
 #include "encoder.h"
 
-char program[] = "+-+-+.";
+char program[] = "+++-.>.++.^.++.v.++.<.";
 
 int run(){
     encode();
@@ -17,13 +17,25 @@ int run(){
     for(int i = 0; i < BYTE_SIZE; i++){
     pc = i;
     switch((unsigned char)bytecode[i]){
-        case 0x00:
+        case 0x00: adr(); break;
         case 0x01: adr(); break;
-        case 0x02:
+        case 0x02: mdr(); break;
         case 0x03: mdr(); break;
-        case 0x04:
+        case 0x04: pvr(); break;
         case 0x05: pvr(); break;
-        case 0xEE: break;
+        case 0x06: nxtc(); break;
+        case 0x07: nxtc(); break;
+        case 0x08: pvc(); break;
+        case 0x09: pvc(); break;
+        case 0x10: cup(); break;
+        case 0x11: cup(); break;
+        case 0x12: cdown(); break;
+        case 0x13: cdown(); break;
+        case 0xEE: break; // NOP
+        default:
+            char expected_str[4] = {'0','x',0,0};
+            UnexpectedToken(expected_str, "unknown opcode");
+            break;
     }
     
     }

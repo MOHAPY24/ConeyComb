@@ -48,3 +48,65 @@ void pvr(){
         UnexpectedToken(expected_str, current_token.type);
     }
 }
+
+
+void nxtc(){
+    int cmd = bytecode[pc];
+    if(cmd == 0x06){
+        xptr++; 
+    }
+    else if(cmd == 0x07){
+        xptr++;
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+}
+
+void pvc(){
+    int cmd = bytecode[pc];
+    if(cmd == 0x08){
+        xptr--; 
+    }
+    else if(cmd == 0x09){
+        xptr--;
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+}
+
+void cup(){
+    int cmd = bytecode[pc];
+    if(cmd == 0x10){
+        yptr++; 
+    }
+    else if(cmd == 0x11){
+        yptr++;
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+}
+
+void cdown(){
+    int cmd = bytecode[pc];
+    if(cmd == 0x12){
+        yptr--; 
+    }
+    else if(cmd == 0x13){
+        yptr--;
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+}
+
+
+
+
+

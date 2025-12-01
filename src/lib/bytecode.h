@@ -11,5 +11,9 @@ extern int pc;
 extern void adrb();
 extern void mdrb();
 extern void prvb();
+extern void nxtcb();
+extern void pvcb();
+extern void cupb();
+extern void cdowb();
 
 #endif

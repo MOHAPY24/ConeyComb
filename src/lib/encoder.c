@@ -66,6 +66,18 @@ void encode(){
         else if(strcmp(recived.value, ".") == 0){
             prvb();
         }
+        else if(strcmp(recived.value, ">") == 0){
+            nxtcb();
+        }
+        else if(strcmp(recived.value, "<") == 0){
+            pvcb();
+        }
+        else if(strcmp(recived.value, "^") == 0){
+            cupb();
+        }
+        else if(strcmp(recived.value, "v") == 0){
+            cdowb();
+        }
 
         else{
             continue;
