@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "contains.h": "c",
+        "tokenize.h": "c",
+        "stdio.h": "c"
+    }
+}
