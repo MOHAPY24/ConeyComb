@@ -8,6 +8,14 @@
 #include "bytecode.h"
 #include "encoder.h"
 
+/*
+My name is Mohammed Mahmoud the 3rd, for the love of everything good in this world, please, do not touch the code.
+Its truly an 8th wonder of the world on how it runs, we do not know how, but it does.
+It is an oracle, a miracle, a phenomenon. an unkown prophacy that even I do not understand.
+If you touch it, you will unleash forces beyond your control, you will break the space-time continuum, you will cause rifts in the fabric of reality itself.
+So please, for the love of all that is holy, do not touch the code.
+*/
+
 char program[] = "+++-.>.++.^.++.v.++.<.";
 
 int run(){
