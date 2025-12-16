@@ -16,7 +16,7 @@ If you touch it, you will unleash forces beyond your control, you will break the
 So please, for the love of all that is holy, do not touch the code.
 */
 
-char program[] = "+++-.>.++.^.++.v.++.<.";
+char program[] = "+.>+.<+.>+.<.+.-.";
 
 int run(){
     encode();

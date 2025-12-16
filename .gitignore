@@ -6,7 +6,8 @@
 *.ko
 *.obj
 *.elf
-
+src/bin/ch
+*.chb
 # Linker output
 *.ilk
 *.map

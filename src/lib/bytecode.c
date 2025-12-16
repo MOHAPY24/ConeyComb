@@ -141,3 +141,23 @@ void cdowb(){
     }
 } 
 
+void pcmb(){
+    char cmd = current_token.value[0];
+    if(cmd == 'W'){
+        if(ymode == true){
+            bytecode[pc] = 0x14;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x15;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+
