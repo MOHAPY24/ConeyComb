@@ -141,7 +141,7 @@ void cdowb(){
     }
 } 
 
-void pcmb(){
+void pcmbb(){
     char cmd = current_token.value[0];
     if(cmd == 'W'){
         if(ymode == true){
@@ -159,5 +159,237 @@ void pcmb(){
         UnexpectedToken(expected_str, current_token.type);
     }
 } 
+
+
+void ncmbb(){
+    char cmd = current_token.value[0];
+    if(cmd == '/'){
+        if(ymode == true){
+            bytecode[pc] = 0x16;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x17;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void pascib(){
+    char cmd = current_token.value[0];
+    if(cmd == ','){
+        if(ymode == true){
+            bytecode[pc] = 0x18;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x19;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+
+void inpb(){
+    char cmd = current_token.value[0];
+    if(cmd == ':'){
+        if(ymode == true){
+            bytecode[pc] = 0x20;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x21;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+}
+
+void cmtb(){
+    char cmd = current_token.value[0];
+    if(cmd == '('){
+        if(ymode == true){
+            bytecode[pc] = 0x22;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x23;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void cmteb(){
+    char cmd = current_token.value[0];
+    if(cmd == ')'){
+        if(ymode == true){
+            bytecode[pc] = 0x24;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x25;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+
+void clrclb(){
+    char cmd = current_token.value[0];
+    if(cmd == '!'){
+        if(ymode == true){
+            bytecode[pc] = 0x26;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x27;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void clrcmbb(){
+    char cmd = current_token.value[0];
+    if(cmd == '~'){
+        if(ymode == true){
+            bytecode[pc] = 0x28;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x29;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void clrtpb(){
+    char cmd = current_token.value[0];
+    if(cmd == '%'){
+        if(ymode == true){
+            bytecode[pc] = 0x30;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x31;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void svplnb(){
+    char cmd = current_token.value[0];
+    if(cmd == '*'){
+        if(ymode == true){
+            bytecode[pc] = 0x32;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x33;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void ldplb(){
+    char cmd = current_token.value[0];
+    if(cmd == '&'){
+        if(ymode == true){
+            bytecode[pc] = 0x34;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x35;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void sqrclb(){
+    char cmd = current_token.value[0];
+    if(cmd == 'S'){
+        if(ymode == true){
+            bytecode[pc] = 0x36;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x37;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
+void if0b(){
+    char cmd = current_token.value[0];
+    if(cmd == '#'){
+        if(ymode == true){
+            bytecode[pc] = 0x38;
+            pc++;
+        }
+        else{
+            ymode = true;
+            bytecode[pc] = 0x39;
+            pc++;
+        }
+    }
+    else{
+        char expected_str[2] = {cmd, '\0'};
+        UnexpectedToken(expected_str, current_token.type);
+    }
+} 
+
 
 
